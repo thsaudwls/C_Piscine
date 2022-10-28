@@ -46,8 +46,8 @@ int	main(int argc, char **argv)
 	}
 	else
 	{
-		ft_printf("Error: wrong format.\n");
-		ft_printf("Try: ./client <PID> <MESSAGE>\n");
+		ft_printf("your input = wrong format.\n");
+		ft_printf("Try again : ./client <PID> <MSG>\n");
 		return (1);
 	}
 	return (0);
