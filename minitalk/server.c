@@ -12,7 +12,7 @@
 
 #include "minitalk.h"
 
-void	ft_handler(int signal)
+void	ft_accept(int signal)
 {
 	static int	bit;
 	static int	i;
@@ -35,16 +35,16 @@ int	main(int argc, char **argv)
 	(void)argv;
 	if (argc != 1)
 	{
-		ft_printf("Error: wrong format.\n");
-		ft_printf("Try: ./server\n");
+		ft_printf("your input = wrong format.\n");
+		ft_printf("Try again : ./server\n");
 		return (0);
 	}
 	pid = getpid();
-	ft_printf("PID: %d\n", pid);
+	ft_printf("PID = [%d]\n", pid);
 	while (argc == 1)
 	{
-		signal(SIGUSR1, ft_handler);
-		signal(SIGUSR2, ft_handler);
+		signal(SIGUSR1, ft_accept);
+		signal(SIGUSR2, ft_accept);
 		pause ();
 	}
 	return (0);
