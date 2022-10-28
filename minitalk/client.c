@@ -12,7 +12,7 @@
 
 #include "minitalk.h"
 
-void	ft_send_bits(int pid, char i)
+void	ft_send(int pid, char i)
 {
 	int	bit;
 
@@ -39,10 +39,10 @@ int	main(int argc, char **argv)
 		pid = ft_atoi(argv[1]);
 		while (argv[2][i] != '\0')
 		{
-			ft_send_bits(pid, argv[2][i]);
+			ft_send(pid, argv[2][i]);
 			i++;
 		}
-		ft_send_bits(pid, '\n');
+		ft_send(pid, '\n');
 	}
 	else
 	{
